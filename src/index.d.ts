@@ -5,10 +5,4 @@
 // ╔══╝ ╚══╗║ ║║ ╚╝ ║╔╝ ╚══╝ ║║ ╚═════╗║ ║║ ╚══╗╔═╗╔╝ ╚══╝ ║╔═╗   ║ ║   ╔═════╝ ║
 // ╚═══════╝╚═╝╚════╝╚═══════╝╚═══════╝╚═╝╚════╝╚═╝╚═══════╝╚═╝   ╚═╝   ╚═══════╝
 
-export function returnTrue(): boolean;
-export function returnFalse(): boolean;
-
-declare module 'permissionEngine' {
-    export function returnTrue(): boolean;
-    export function returnFalse(): boolean;
-}
+declare module 'permissionEngine' {}
