@@ -15,6 +15,7 @@
 // ╚═══════╝╚═╝╚═╝╚═╝╚═╝      ╚═══════╝╚═╝ ╚═══╝   ╚═╝
 
 import * as permissionEngine from './engines/permission-engine/permission-engine.mjs';
+import * as keyEngine from './engines/key-engine/key-engine.mjs';
 
 // ╔═══════╗╔════╗╔═╗╔═══════╗╔═══════╗╔═══════╗╔═══════╗
 // ║ ╔═════╝╚══╗ ║║ ║║ ╔═══╗ ║║ ╔═══╗ ║║ ╔═══╗ ║╚══╗ ╔══╝
@@ -32,8 +33,10 @@ export default function(permissions) {
         // ║ ║   ║ ║║ ║   ║ ║╔═════╝ ║
         // ╚═╝   ╚═╝╚═╝   ╚═╝╚═══════╝
 
-        has: function(permissionKey) {
-            return permissionEngine.hasPermission(permissions, permissionKey);
+        has: function(keyString) {
+            const key = keyEngine.createKey(keyString);
+
+            return permissionEngine.hasPermission(permissions, key);
         },
     };
 };
