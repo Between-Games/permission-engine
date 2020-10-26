@@ -13,5 +13,5 @@
 // ╚═╝   ╚═╝╚═╝   ╚═╝╚═══════╝
 
 export function hasPermission(tree, key) {
-
+    return tree.getNode(key) === true;
 }
