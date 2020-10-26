@@ -15,6 +15,7 @@
 // ╚═══════╝╚═╝╚═╝╚═╝╚═╝      ╚═══════╝╚═╝ ╚═══╝   ╚═╝
 
 import * as permissionEngine from './engines/permission-engine/permission-engine.mjs';
+import * as treeEngine from './engines/tree-engine/tree-engine.mjs';
 import * as keyEngine from './engines/key-engine/key-engine.mjs';
 
 // ╔═══════╗╔════╗╔═╗╔═══════╗╔═══════╗╔═══════╗╔═══════╗
@@ -24,7 +25,7 @@ import * as keyEngine from './engines/key-engine/key-engine.mjs';
 // ║ ╚═════╗║ ║║ ╚══╗║ ║      ║ ╚═══╝ ║║ ║ ║ ╚═╗   ║ ║
 // ╚═══════╝╚═╝╚════╝╚═╝      ╚═══════╝╚═╝ ╚═══╝   ╚═╝
 
-export default function(permissions) {
+export default function(permissionJson) {
     return {
         // ╔═╗   ╔═╗╔═══════╗╔═══════╗
         // ║ ║   ║ ║║ ╔═══╗ ║║ ╔═════╝
@@ -33,10 +34,11 @@ export default function(permissions) {
         // ║ ║   ║ ║║ ║   ║ ║╔═════╝ ║
         // ╚═╝   ╚═╝╚═╝   ╚═╝╚═══════╝
 
-        has: function(keyString) {
-            const key = keyEngine.createKey(keyString);
+        has: function(permissionKey) {
+            const key = keyEngine.createKey(permissionKey);
+            const tree = treeEngine.createTree(permissionJson);
 
-            return permissionEngine.hasPermission(permissions, key);
+            return permissionEngine.hasPermission(tree, key);
         },
     };
 };
