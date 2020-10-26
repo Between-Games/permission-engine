@@ -8,7 +8,7 @@
 export function returnTrue(): boolean;
 export function returnFalse(): boolean;
 
-declare module 'xxxEngine' {
+declare module 'permissionEngine' {
     export function returnTrue(): boolean;
     export function returnFalse(): boolean;
 }
