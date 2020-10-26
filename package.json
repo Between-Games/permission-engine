@@ -1,6 +1,6 @@
 {
   "name": "@xxx/permission-engine",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Manage permissions in a cascading manner with JSON",
   "files": [
     "dist"
