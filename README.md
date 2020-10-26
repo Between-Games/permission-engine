@@ -1,6 +1,6 @@
-# XXX-Engine
+# Permission-Engine
 
-Upcoming details...
+Manage permissions in a cascading manner with JSON.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Upcoming details...
 
 * Gabriel Roy - Repository Owner - [S-A-R-C](https://github.com/S-A-R-C)
 
-See also the list of [contributors](https://github.com/S-A-R-C/xxx-engine/graphs/contributors) who are linked to this project.
+See also the list of [contributors](https://github.com/S-A-R-C/permission-engine/graphs/contributors) who are linked to this project.
 
 ## License
 
